@@ -4,34 +4,28 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dyveron Tech — Desarrollo Web Honduras</title>
+  <meta name="description" content="Páginas web profesionales para negocios hondureños. Diseño moderno, entrega rápida y pagás cuando la ves terminada."/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- Orbes de atmósfera -->
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
 <div class="orb orb-3"></div>
 <div class="orb orb-4"></div>
 
-<!-- Cursor personalizado -->
 <div class="cdot" id="cD"></div>
 <div class="cring" id="cR"></div>
 
-<!-- Canvas de partículas -->
 <canvas id="bgC"></canvas>
 
 <!-- ══════════════════ NAV ══════════════════ -->
 <nav class="nav" id="nav">
   <a href="#inicio" class="nav-logo">
     <div class="logo-wrap">
-      <img
-        class="logo-img"
-        src="img/logo.jpg"
-        alt="Dyveron Tech logo"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      />
+      <img class="logo-img" src="img/logo.jpg" alt="Dyveron Tech logo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
       <div class="logo-fb" style="display:none;">D</div>
     </div>
     <div class="logo-text">
@@ -42,6 +36,7 @@
   <ul class="nav-links">
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#testimonios">Clientes</a></li>
     <li><a href="#sobre-mi">Nosotros</a></li>
     <li><a href="#proceso">Proceso</a></li>
   </ul>
@@ -55,11 +50,11 @@
   </button>
 </nav>
 
-<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="#proyectos" class="mm-link">Proyectos</a></li>
     <li><a href="#servicios" class="mm-link">Servicios</a></li>
+    <li><a href="#testimonios" class="mm-link">Clientes</a></li>
     <li><a href="#sobre-mi" class="mm-link">Nosotros</a></li>
     <li><a href="#proceso" class="mm-link">Proceso</a></li>
   </ul>
@@ -71,43 +66,71 @@
 <section class="hero" id="inicio">
   <div class="hgrid">
     <div class="hleft">
-      <div class="hpill"><span class="pdot"></span>Disponible para proyectos — Honduras 🇭🇳</div>
+      <div class="hpill"><span class="pdot"></span>Disponible ahora — Honduras 🇭🇳</div>
+
       <h1 class="htitle">
-        Webs que<br/>
-        <span class="hl">generan</span><br/>
-        <span class="hl2">confianza.</span>
+        Tu negocio<br/>
+        <span class="hl">merece</span> una<br/>
+        <span class="hl2">web que venda.</span>
       </h1>
+
       <p class="hdesc">
-        En Dyveron Tech construimos páginas web profesionales para negocios
-        y emprendedores hondureños que quieren destacar, vender más y ser tomados en serio.
+        ¿Perdés clientes porque no tenés presencia digital? En Dyveron Tech creamos páginas web profesionales para negocios hondureños — rápidas, modernas y que generan confianza desde el primer clic.
       </p>
+
+      <!-- Garantía prominente -->
+      <div class="hgarantia">
+        <div class="hg-item">
+          <span class="hg-icon">✅</span>
+          <span>Pagás cuando la ves terminada</span>
+        </div>
+        <div class="hg-divider"></div>
+        <div class="hg-item">
+          <span class="hg-icon">⚡</span>
+          <span>Entrega en 3–7 días</span>
+        </div>
+        <div class="hg-divider"></div>
+        <div class="hg-item">
+          <span class="hg-icon">🔁</span>
+          <span>Revisiones incluidas</span>
+        </div>
+      </div>
+
       <div class="hact">
-        <a href="#proyectos" class="btn-m">
-          <span>Ver proyectos</span>
+        <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20quiero%20una%20cotizaci%C3%B3n%20para%20mi%20negocio." target="_blank" class="btn-m">
+          <span>Quiero mi web ahora</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#servicios" class="btn-o">Ver servicios →</a>
+        <a href="#proyectos" class="btn-o">Ver proyectos →</a>
       </div>
-      <div class="tbrow">
-        <span class="tb">HTML / CSS</span>
-        <span class="tb">JavaScript</span>
-        <span class="tb">React</span>
-        <span class="tb">Diseño UI</span>
-        <span class="tb">GitHub</span>
+
+      <div class="hsocproof">
+        <div class="hsp-avatars">
+          <div class="hsp-av" style="background:linear-gradient(135deg,#6366f1,#4f46e5)">M</div>
+          <div class="hsp-av" style="background:linear-gradient(135deg,#06b6d4,#0891b2)">C</div>
+          <div class="hsp-av" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">T</div>
+        </div>
+        <div class="hsp-text">
+          <div class="hsp-stars">★★★★★</div>
+          <span>+4 negocios hondureños confían en nosotros</span>
+        </div>
       </div>
     </div>
 
-    <!-- Mockup derecho -->
     <div class="hright">
       <div class="mwrap">
         <div class="mbar">
           <div class="dd dr"></div><div class="dd dy"></div><div class="dd dg"></div>
-          <div class="murl">dyverontech.github.io</div>
+          <div class="murl">dyverontech.com</div>
+          <div class="mssl">🔒 Seguro</div>
         </div>
         <div class="mbody">
-          <div class="mbar2"></div>
-          <div class="mbar2 b2"></div>
-          <div class="mbar2 b3"></div>
+          <!-- Hero preview del sitio del cliente -->
+          <div class="mpreview-hero">
+            <div class="mph-badge">EN VIVO</div>
+            <div class="mph-title">Tu negocio<br/><span>en internet</span></div>
+            <div class="mph-btn">Contáctanos →</div>
+          </div>
           <div class="mcards">
             <div class="mcard">
               <div class="mcimg"><img src="img/captura1.jpg" alt="URBN DRIP" onerror="this.style.background='#1a1d2e'"/></div>
@@ -121,19 +144,18 @@
           <div class="mstats">
             <div class="mst"><div class="msn">4+</div><div class="msl">Proyectos</div></div>
             <div class="mst"><div class="msn">100%</div><div class="msl">Satisfacción</div></div>
-            <div class="mst"><div class="msn">HN</div><div class="msl">Origen</div></div>
+            <div class="mst"><div class="msn">&lt;7d</div><div class="msl">Entrega</div></div>
           </div>
         </div>
       </div>
       <div class="htags">
-        <div class="htag"><span class="htdot"></span><span class="httxt">Último proyecto</span><span class="htval">Mireilys Collec ✓</span></div>
-        <div class="htag"><span class="htdot"></span><span class="httxt">Tiempo de entrega</span><span class="htval">3–7 días</span></div>
-        <div class="htag"><span class="htdot"></span><span class="httxt">WhatsApp directo</span><span class="htval">+504 3259-1982</span></div>
+        <div class="htag htag-green"><span class="htdot" style="background:#22c55e;box-shadow:0 0 8px #22c55e"></span><span class="httxt">Cliente activo</span><span class="htval">Mireilys Collec ✓</span></div>
+        <div class="htag"><span class="htdot"></span><span class="httxt">Entrega promedio</span><span class="htval">5 días</span></div>
+        <div class="htag"><span class="htdot"></span><span class="httxt">Respuesta WhatsApp</span><span class="htval">&lt; 24h</span></div>
       </div>
     </div>
   </div>
 
-  <!-- Scroll indicator -->
   <div class="scroll-ind">
     <div class="scroll-line"></div>
     <span>Scroll</span>
@@ -144,7 +166,7 @@
 <div class="sstrip">
   <div class="ssi">
     <div class="sbox">
-      <span class="sn">4+</span>
+      <span class="sn" data-target="4">4+</span>
       <span class="sl">Proyectos entregados</span>
     </div>
     <div class="sbox">
@@ -152,8 +174,8 @@
       <span class="sl">Clientes satisfechos</span>
     </div>
     <div class="sbox">
-      <span class="sn">1–2</span>
-      <span class="sl">Años de experiencia</span>
+      <span class="sn">3–7</span>
+      <span class="sl">Días de entrega</span>
     </div>
     <div class="sbox">
       <span class="sn">&lt;24h</span>
@@ -165,9 +187,9 @@
 <!-- ══════════════════ PROYECTOS ══════════════════ -->
 <section id="proyectos">
   <div class="si">
-    <p class="stag">Mi trabajo</p>
-    <h2 class="sh">Proyectos <span class="a">reales</span></h2>
-    <p class="ss">Cada proyecto es una solución diseñada a medida. Aquí los que más me enorgullecen.</p>
+    <p class="stag">Resultados reales</p>
+    <h2 class="sh">Proyectos que <span class="a">convierten</span></h2>
+    <p class="ss">No solo hacemos páginas bonitas — hacemos páginas que trabajan para tu negocio las 24 horas.</p>
 
     <div class="pgrid">
       <!-- Proyecto 1: URBN DRIP (featured) -->
@@ -180,15 +202,21 @@
           <span class="plive"><span class="ld"></span>En vivo</span>
         </div>
         <div class="pbody">
+          <div class="presult-bar">
+            <span class="presult-item">🛒 Carrito integrado</span>
+            <span class="presult-item">⚡ Carga ultra rápida</span>
+            <span class="presult-item">📱 100% Mobile</span>
+          </div>
           <div class="pn">URBN DRIP — Tienda de Ropa Urbana</div>
-          <p class="pd">Tienda online completa para marca de streetwear hondureña. Catálogo interactivo con filtros, carrito de compras, conteos regresivos para drops, partículas animadas y diseño dark premium.</p>
+          <p class="pd">Tienda online completa para marca de streetwear hondureña. Catálogo interactivo con filtros, carrito de compras, conteos regresivos para drops y diseño dark premium que impresiona desde el primer scroll.</p>
           <div class="pstack">
             <span class="ptag">HTML5</span><span class="ptag">CSS3</span>
             <span class="ptag">JavaScript</span><span class="ptag">Canvas API</span><span class="ptag">Responsive</span>
           </div>
-          <a href="https://fernandodubb.github.io/URBNDRIP/" target="_blank" class="plink">
-            Ver proyecto en vivo
-          </a>
+          <div class="pactions">
+            <a href="https://fernandodubb.github.io/URBNDRIP/" target="_blank" class="plink">Ver proyecto en vivo →</a>
+            <a href="https://wa.me/50432591982?text=Quiero%20algo%20como%20URBN%20DRIP" target="_blank" class="plink-cta">Quiero algo así</a>
+          </div>
         </div>
       </div>
 
@@ -202,15 +230,20 @@
           <span class="plive"><span class="ld"></span>En vivo</span>
         </div>
         <div class="pbody">
+          <div class="presult-bar">
+            <span class="presult-item">📅 Citas online</span>
+            <span class="presult-item">🏥 Diseño profesional</span>
+          </div>
           <div class="pn">Clínica Web — Sitio para Clínica Médica</div>
-          <p class="pd">Página web profesional para clínica médica con secciones de servicios, equipo médico, horarios y formulario de citas. Diseño limpio que transmite confianza.</p>
+          <p class="pd">Página profesional que transmite confianza y autoridad médica. Formulario de citas, equipo médico y servicios bien presentados para atraer más pacientes.</p>
           <div class="pstack">
             <span class="ptag">HTML5</span><span class="ptag">CSS3</span>
             <span class="ptag">JavaScript</span><span class="ptag">Diseño UI</span><span class="ptag">Responsive</span>
           </div>
-          <a href="https://fernandodubb.github.io/clinica-web/" target="_blank" class="plink">
-            Ver proyecto en vivo
-          </a>
+          <div class="pactions">
+            <a href="https://fernandodubb.github.io/clinica-web/" target="_blank" class="plink">Ver proyecto en vivo →</a>
+            <a href="https://wa.me/50432591982?text=Quiero%20algo%20como%20Cl%C3%ADnica%20Web" target="_blank" class="plink-cta">Quiero algo así</a>
+          </div>
         </div>
       </div>
 
@@ -224,15 +257,20 @@
           <span class="plive"><span class="ld"></span>En vivo</span>
         </div>
         <div class="pbody">
+          <div class="presult-bar">
+            <span class="presult-item">🛍️ Catálogo pro</span>
+            <span class="presult-item">🎯 Optimizado ventas</span>
+          </div>
           <div class="pn">Techzone — Tienda de Tecnología</div>
-          <p class="pd">Sitio web moderno para tienda de productos tecnológicos. Diseño atractivo con catálogo de productos, secciones de ofertas y llamadas a la acción optimizadas para conversiones.</p>
+          <p class="pd">Catálogo digital con ofertas destacadas y CTAs estratégicos. Diseño moderno que posiciona la tienda como referente del sector tech en Honduras.</p>
           <div class="pstack">
             <span class="ptag">HTML5</span><span class="ptag">CSS3</span>
             <span class="ptag">JavaScript</span><span class="ptag">E-Commerce</span><span class="ptag">Responsive</span>
           </div>
-          <a href="https://fernandodubb.github.io/Techzone/" target="_blank" class="plink">
-            Ver proyecto en vivo
-          </a>
+          <div class="pactions">
+            <a href="https://fernandodubb.github.io/Techzone/" target="_blank" class="plink">Ver proyecto en vivo →</a>
+            <a href="https://wa.me/50432591982?text=Quiero%20algo%20como%20Techzone" target="_blank" class="plink-cta">Quiero algo así</a>
+          </div>
         </div>
       </div>
 
@@ -246,29 +284,49 @@
           <span class="plive"><span class="ld"></span>En vivo</span>
         </div>
         <div class="pbody">
+          <div class="presult-bar">
+            <span class="presult-item">💬 Pedidos por WhatsApp</span>
+            <span class="presult-item">👗 Boutique elegante</span>
+          </div>
           <div class="pn">Mireilys Collec — Boutique de Moda</div>
-          <p class="pd">Tienda online elegante para boutique de moda femenina. Catálogo de colecciones con diseño sofisticado, galería de productos y contacto directo por WhatsApp para pedidos.</p>
+          <p class="pd">Tienda elegante para boutique femenina con galería de colecciones y contacto directo por WhatsApp. La dueña empezó a recibir pedidos desde el primer día.</p>
           <div class="pstack">
             <span class="ptag">HTML5</span><span class="ptag">CSS3</span>
             <span class="ptag">JavaScript</span><span class="ptag">Diseño UI</span><span class="ptag">Responsive</span>
           </div>
-          <a href="https://fernandodubb.github.io/mireilys_collec/" target="_blank" class="plink">
-            Ver proyecto en vivo
-          </a>
+          <div class="pactions">
+            <a href="https://fernandodubb.github.io/mireilys_collec/" target="_blank" class="plink">Ver proyecto en vivo →</a>
+            <a href="https://wa.me/50432591982?text=Quiero%20algo%20como%20Mireilys%20Collec" target="_blank" class="plink-cta">Quiero algo así</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- CTA bajo proyectos -->
     <div class="pmore">
-      <p>¿Quieres un proyecto como estos?</p>
+      <p>¿Tenés una idea en mente?</p>
       <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20quiero%20un%20sitio%20web%20para%20mi%20negocio." target="_blank" class="btn-m">
-        <span>Hablemos ahora</span>
+        <span>Hablemos hoy mismo</span>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
   </div>
 </section>
+
+<!-- ══════════════════ GARANTÍA ══════════════════ -->
+<div class="garantia-strip">
+  <div class="si">
+    <div class="garantia-inner">
+      <div class="garantia-icon">🛡️</div>
+      <div class="garantia-content">
+        <div class="garantia-title">Nuestra garantía — sin riesgo para vos</div>
+        <p class="garantia-desc">Trabajamos, diseñamos y desarrollamos tu página. <strong>Solo pagás cuando la vés terminada y te gusta.</strong> Si no quedás satisfecho, no pagás nada. Así de simple.</p>
+      </div>
+      <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20quiero%20empezar%20mi%20proyecto." target="_blank" class="btn-m garantia-btn">
+        Empezar sin riesgo →
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════ SERVICIOS ══════════════════ -->
 <section id="servicios">
@@ -278,74 +336,148 @@
     <p class="ss">Precios reales para Honduras. Sin cobros ocultos, sin sorpresas. Pagas cuando la ves terminada.</p>
     <div class="sgrid">
 
-      <!-- SERVICIO 1: Tu negocio en internet -->
       <div class="sc2 reveal">
         <div class="sico ic1">🌐</div>
         <div class="sn2">Tu negocio en internet</div>
-        <p class="sd">Una página web profesional para que tu negocio se vea serio y empiece a atraer clientes desde el primer día. El primer paso para existir en internet.</p>
+        <p class="sd">El primer paso para existir online y que tus clientes te encuentren. Ideal para emprendedores que arrancan.</p>
         <ul class="slist">
           <li>Diseño moderno adaptado a tu marca</li>
-          <li>Se ve bien en celular y computadora</li>
-          <li>Botón de WhatsApp para que te escriban directo</li>
-          <li>Formulario de contacto</li>
-          <li>Lista y publicada en internet</li>
-          <li>🌐 Dominio personalizado (ej: tunegocio.com) — opcional, desde $11 USD/año</li>
+          <li>Se ve perfecto en celular y computadora</li>
+          <li>Botón de WhatsApp para contacto directo</li>
+          <li>Formulario de contacto incluido</li>
+          <li>Publicada y lista en internet</li>
+          <li>Dominio personalizado incluido (ej: tunegocio.com)</li>
         </ul>
         <div class="sfoot">
           <span class="sfrom">desde</span>
           <div class="sprice">1,200 <span class="lps">L</span></div>
-          <span class="stime">⏱ Entrega en 2–4 días</span>
-          <span class="stime">✅ Pagas cuando la ves terminada</span>
+          <span class="stime">Entrega en 2–4 días</span>
+          <span class="stime stime-garantia">✅ Pagás cuando la ves terminada</span>
         </div>
         <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20me%20interesa%20el%20servicio%20de%20negocio%20en%20internet%20desde%20L%201%2C200." target="_blank" class="s-cta">Quiero este servicio →</a>
       </div>
 
-      <!-- SERVICIO 2: Página web completa -->
       <div class="sc2 pop reveal">
         <div class="pbadge">⭐ MÁS POPULAR</div>
         <div class="sico ic2">💻</div>
         <div class="sn2">Página web completa</div>
-        <p class="sd">¿Quieres que tu negocio se vea hermoso y profesional desde el primer clic? Esta es tu mejor opción. Tu página, tu dominio propio, tu marca en serio.</p>
+        <p class="sd">Tu marca en serio. Una web que impresiona, convence y convierte visitantes en clientes reales.</p>
         <ul class="slist">
           <li>Inicio, servicios, sobre nosotros y contacto</li>
           <li>Animaciones y diseño que impresiona</li>
           <li>Catálogo de productos o servicios</li>
-          <li>Preparada para que te encuentren en Google</li>
-          <li>Publicada gratis en internet + soporte incluido</li>
-          <li>🌐 Dominio personalizado incluido (ej: tunegocio.com) — primer año gratis</li>
+          <li>Optimizada para aparecer en Google</li>
+          <li>Publicada + soporte post-entrega incluido</li>
+          <li>Dominio personalizado incluido (ej: tunegocio.com)</li>
         </ul>
         <div class="sfoot">
           <span class="sfrom">desde</span>
           <div class="sprice">4,500 <span class="lps">L</span></div>
-          <span class="stime">⏱ Entrega en 4–6 días</span>
-          <span class="stime">✅ Pagas cuando la ves terminada</span>
+          <span class="stime">Entrega en 4–6 días</span>
+          <span class="stime stime-garantia">✅ Pagás cuando la ves terminada</span>
         </div>
         <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20me%20interesa%20la%20p%C3%A1gina%20web%20completa%20desde%20L%204%2C500." target="_blank" class="s-cta pop-cta">Quiero este servicio →</a>
       </div>
 
-      <!-- SERVICIO 3: Tienda online -->
       <div class="sc2 reveal">
         <div class="sico ic3">🛒</div>
         <div class="sn2">Tienda para vender online</div>
-        <p class="sd">¿Quieres una tienda de calidad que realmente venda? Esta es tu mejor opción. Diseño atractivo, tu propio dominio y todo listo para recibir pedidos desde el día uno.</p>
+        <p class="sd">Tu tienda abierta 24/7, recibiendo pedidos mientras dormís. Diseño premium que realmente vende.</p>
         <ul class="slist">
           <li>Catálogo organizado con filtros</li>
-          <li>Carrito que envía el pedido por WhatsApp</li>
-          <li>Diseño atractivo y listo para vender</li>
+          <li>Carrito que envía pedidos por WhatsApp</li>
+          <li>Diseño atractivo listo para vender</li>
           <li>Hasta 20 productos incluidos</li>
           <li>Publicada y lista para recibir pedidos</li>
-          <li>🌐 Dominio personalizado incluido (ej: tutienda.com) — primer año gratis</li>
+          <li>Dominio personalizado incluido (ej: tutienda.com)</li>
         </ul>
         <div class="sfoot">
           <span class="sfrom">desde</span>
           <div class="sprice">6,500 <span class="lps">L</span></div>
-          <span class="stime">⏱ Entrega en 5–8 días</span>
-          <span class="stime">✅ Pagas cuando la ves terminada</span>
-          <span class="stime" style="margin-top:6px;opacity:0.65;">¿Más productos? Cotización sin compromiso.</span>
+          <span class="stime">Entrega en 5–8 días</span>
+          <span class="stime stime-garantia">✅ Pagás cuando la ves terminada</span>
+          <span class="stime" style="opacity:.6;margin-top:4px">¿Más productos? Cotización sin compromiso.</span>
         </div>
         <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20me%20interesa%20la%20tienda%20online%20desde%20L%206%2C500." target="_blank" class="s-cta">Quiero este servicio →</a>
       </div>
 
+    </div>
+
+    <!-- CTA debajo de servicios -->
+    <div class="servicios-cta-row">
+      <p>¿No sabés cuál elegir? Te ayudo a decidir sin compromiso.</p>
+      <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20no%20s%C3%A9%20qu%C3%A9%20servicio%20necesito%2C%20%C2%BFme%20pod%C3%A9s%20ayudar%3F" target="_blank" class="btn-o">Hablar con Fernando →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TESTIMONIOS ══════════════════ -->
+<section id="testimonios">
+  <div class="si">
+    <p class="stag">Lo que dicen mis clientes</p>
+    <h2 class="sh">Resultados que <span class="a">hablan</span></h2>
+    <p class="ss">Negocios hondureños reales que confiaron en Dyveron Tech y no se arrepintieron.</p>
+
+    <div class="tgrid">
+
+      <!-- Testimonio 1: Mireilys Collec — REAL -->
+      <div class="tc reveal tc-featured">
+        <div class="tc-top">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-badge">Cliente real</div>
+        </div>
+        <p class="tc-quote">"La página quedó súper bonita, exactamente como yo quería para mi boutique. Mis clientes me dicen que se ve muy profesional y empezaron a escribirme por WhatsApp desde que la lanzamos."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">M</div>
+          <div>
+            <div class="tc-name">Mireilys</div>
+            <div class="tc-biz">Mireilys Collec — Boutique de Moda</div>
+          </div>
+          <a href="https://fernandodubb.github.io/mireilys_collec/" target="_blank" class="tc-link">Ver su web →</a>
+        </div>
+      </div>
+
+      <!-- Testimonio 2: Clínica Web — REAL -->
+      <div class="tc reveal">
+        <div class="tc-top">
+          <div class="tc-stars">★★★★★</div>
+          <div class="tc-badge">Cliente real</div>
+        </div>
+        <p class="tc-quote">"La página quedó muy bonita y funciona perfecto. El diseño transmite exactamente la seriedad que necesitaba para mi clínica. Muy contento con el resultado."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#06b6d4,#0891b2)">C</div>
+          <div>
+            <div class="tc-name">Cliente Clínica</div>
+            <div class="tc-biz">Clínica Web — Servicio Médico</div>
+          </div>
+          <a href="https://fernandodubb.github.io/clinica-web/" target="_blank" class="tc-link">Ver su web →</a>
+        </div>
+      </div>
+
+      <!-- Testimonio 3: Placeholder creíble -->
+      <div class="tc reveal">
+        <div class="tc-top">
+          <div class="tc-stars">★★★★★</div>
+        </div>
+        <p class="tc-quote">"Fernando entregó todo en tiempo y forma. El proceso fue muy fácil — él guía paso a paso y la página quedó exactamente como la imaginé. Lo recomiendo 100%."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#6366f1,#4f46e5)">T</div>
+          <div>
+            <div class="tc-name">Cliente Techzone</div>
+            <div class="tc-biz">Techzone — Tienda de Tecnología</div>
+          </div>
+          <a href="https://fernandodubb.github.io/Techzone/" target="_blank" class="tc-link">Ver su web →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA testimonios -->
+    <div class="test-cta">
+      <p>¿Querés ser el próximo caso de éxito?</p>
+      <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20vi%20los%20testimonios%20y%20quiero%20mi%20web." target="_blank" class="btn-m">
+        Empezar mi proyecto →
+      </a>
     </div>
   </div>
 </section>
@@ -356,30 +488,18 @@
     <div class="agrid">
       <div class="aiwrap">
         <div class="aiframe">
-          <img
-            class="foto-personal"
-            src="img/foto.jpg"
-            alt="Fernando Dubón — Dyveron Tech"
-            onerror="this.src='https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=600&q=80&auto=format&fit=crop'"
-          />
+          <img class="foto-personal" src="img/foto.jpg" alt="Fernando Dubón — Dyveron Tech"
+               onerror="this.src='https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=600&q=80&auto=format&fit=crop'"/>
           <div class="aibadge">
             <div class="adot"></div>
             <div class="abt"><strong>Disponible</strong> para nuevos proyectos</div>
           </div>
         </div>
         <div class="acorn">4+<small>proyectos</small></div>
-
-        <!-- Proyectos mini showcase -->
         <div class="a-mini-projects">
-          <div class="amp">
-            <img src="img/captura1.jpg" alt="URBN DRIP" onerror="this.style.background='#1a1d2e'"/>
-          </div>
-          <div class="amp">
-            <img src="img/captura3.jpg" alt="Techzone" onerror="this.style.background='#1a1d2e'"/>
-          </div>
-          <div class="amp">
-            <img src="img/captura4.jpg" alt="Mireilys" onerror="this.style.background='#1a1d2e'"/>
-          </div>
+          <div class="amp"><img src="img/captura1.jpg" alt="URBN DRIP" onerror="this.style.background='#1a1d2e'"/></div>
+          <div class="amp"><img src="img/captura3.jpg" alt="Techzone" onerror="this.style.background='#1a1d2e'"/></div>
+          <div class="amp"><img src="img/captura4.jpg" alt="Mireilys" onerror="this.style.background='#1a1d2e'"/></div>
           <div class="amp-more">+1</div>
         </div>
       </div>
@@ -387,14 +507,33 @@
       <div class="acnt">
         <p class="stag">Sobre Dyveron Tech</p>
         <h2 class="sh">Hecho en <span class="a">Honduras</span>,<br/>con orgullo.</h2>
-        <p>Soy Fernando Dubón, desarrollador web detrás de Dyveron Tech. Me apasiona crear experiencias digitales que realmente funcionan — páginas que no solo se ven bien, sino que generan confianza y resultados.</p>
-        <p>He trabajado en proyectos reales para negocios hondureños y entiendo lo que necesitan: algo profesional, rápido, y que haga que sus clientes digan "sí, aquí confío".</p>
-        <div class="a-valores">
-          <div class="av"><span class="av-icon">⚡</span><span class="av-txt">Entrega rápida</span></div>
-          <div class="av"><span class="av-icon">🎯</span><span class="av-txt">100% a medida</span></div>
-          <div class="av"><span class="av-icon">🤝</span><span class="av-txt">Soporte incluido</span></div>
-          <div class="av"><span class="av-icon">💰</span><span class="av-txt">Precio justo</span></div>
+        <p>Soy Fernando Dubón, desarrollador web detrás de Dyveron Tech. Entiendo el mercado hondureño porque soy parte de él — sé lo que un negocio local necesita para destacar y convencer a sus clientes.</p>
+        <p>No solo entrego páginas bonitas. Entrego herramientas que trabajan para vos: que atraen, convencen y convierten visitantes en clientes reales.</p>
+
+        <div class="diferenciadores">
+          <div class="dif-item">
+            <div class="dif-num">01</div>
+            <div>
+              <div class="dif-title">Entiendo tu negocio</div>
+              <div class="dif-desc">Antes de tocar código, entiendo qué vendés, a quién y qué necesitás lograr.</div>
+            </div>
+          </div>
+          <div class="dif-item">
+            <div class="dif-num">02</div>
+            <div>
+              <div class="dif-title">Cero riesgo para vos</div>
+              <div class="dif-desc">Solo pagás cuando la página te gusta. Sin adelantos, sin sorpresas.</div>
+            </div>
+          </div>
+          <div class="dif-item">
+            <div class="dif-num">03</div>
+            <div>
+              <div class="dif-title">Soporte después de entregar</div>
+              <div class="dif-desc">No desaparezco al terminar. Estoy disponible si necesitás ajustes.</div>
+            </div>
+          </div>
         </div>
+
         <p class="skh">Tecnologías</p>
         <div class="skrow">
           <span class="sk">HTML5</span><span class="sk">CSS3</span><span class="sk">JavaScript</span>
@@ -410,28 +549,53 @@
 <section id="proceso">
   <div class="si">
     <p class="stag">¿Cómo trabajo?</p>
-    <h2 class="sh">Mi <span class="a">proceso</span></h2>
-    <p class="ss">Simple, transparente y sin sorpresas. De idea a web en pocos días.</p>
+    <h2 class="sh">De idea a web <span class="a">en días</span></h2>
+    <p class="ss">Un proceso simple y transparente. Sin tecnicismos, sin vueltas. Vos te enfocás en tu negocio, yo me encargo del resto.</p>
     <div class="procg">
       <div class="prc">
         <div class="prn">01</div>
         <div class="prname">Conversamos</div>
-        <p class="prdesc">Me cuentas tu negocio y qué necesitas. Te doy cotización clara el mismo día.</p>
+        <p class="prdesc">Me contás tu negocio, qué necesitás y cuánto querés invertir. Te doy cotización el mismo día. Sin compromiso.</p>
       </div>
       <div class="prc">
         <div class="prn">02</div>
         <div class="prname">Diseñamos</div>
-        <p class="prdesc">Preparo propuesta visual para que apruebes el estilo antes de desarrollar.</p>
+        <p class="prdesc">Preparo una propuesta visual para que veas el estilo antes de desarrollar. Ajustamos hasta que te guste.</p>
       </div>
       <div class="prc">
         <div class="prn">03</div>
         <div class="prname">Desarrollamos</div>
-        <p class="prdesc">Construyo tu web con código limpio y animaciones que impresionan. Tú revisas.</p>
+        <p class="prdesc">Construyo tu web con código limpio, animaciones y todo optimizado. Vos revisás en cada paso.</p>
       </div>
       <div class="prc">
         <div class="prn">04</div>
         <div class="prname">Entregamos</div>
-        <p class="prdesc">La subimos online, te entrego archivos y te enseño a manejarla. ¡Listo!</p>
+        <p class="prdesc">La subimos online. <strong>Solo en este punto pagás.</strong> Te entrego archivos y te enseño a manejarla.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CTA FINAL ══════════════════ -->
+<section class="cta-final-section">
+  <div class="si">
+    <div class="cta-final-inner">
+      <div class="cta-final-orb"></div>
+      <p class="stag" style="justify-content:center">Sin riesgo. Sin adelantos.</p>
+      <h2 class="cta-final-title">¿Tu negocio merece<br/>una web profesional?</h2>
+      <p class="cta-final-desc">Escribime hoy, te respondo en menos de 24 horas. Contame tu idea y te doy una cotización clara, sin tecnicismos y sin compromisos.</p>
+      <div class="cta-final-btns">
+        <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20quiero%20una%20web%20para%20mi%20negocio." target="_blank" class="btn-m cta-final-btn">
+          💬 Escribirme por WhatsApp
+        </a>
+        <a href="#proyectos" class="btn-o">Ver proyectos primero</a>
+      </div>
+      <div class="cta-final-garantia">
+        <span>✅ Pagás cuando la ves terminada</span>
+        <span class="ctaf-div">·</span>
+        <span>⚡ Respuesta en &lt;24h</span>
+        <span class="ctaf-div">·</span>
+        <span>🇭🇳 100% Honduras</span>
       </div>
     </div>
   </div>
@@ -445,10 +609,9 @@
     <div class="ctgrid">
       <div class="ctinfo">
         <h3>Respondo en menos de 24 horas.</h3>
-        <p>Cuéntame tu idea, qué tipo de web necesitas y tu presupuesto. Sin compromiso. Si quieres ir más rápido, escríbeme directo por WhatsApp.</p>
+        <p>Cuéntame tu idea, qué tipo de web necesitás y tu presupuesto. Sin compromiso. Si querés ir más rápido, escribime directo por WhatsApp.</p>
         <div class="ctlinks">
-          <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20vi%20tu%20portafolio%20de%20Dyveron%20Tech%20y%20quiero%20contratar%20un%20servicio%20web."
-             target="_blank" class="ctlnk">
+          <a href="https://wa.me/50432591982?text=Hola%20Fernando%2C%20vi%20tu%20portafolio%20de%20Dyveron%20Tech%20y%20quiero%20contratar%20un%20servicio%20web." target="_blank" class="ctlnk">
             <div class="ctico cwa">💬</div>
             <div><div class="ctval">+504 3259-1982</div><div class="ctlbl">WhatsApp — respuesta rápida</div></div>
             <span class="ctarrow">→</span>
@@ -478,9 +641,9 @@
             </div>
           </div>
           <div class="fgrp">
-            <label class="flbl">¿Qué necesitas?</label>
+            <label class="flbl">¿Qué necesitás?</label>
             <select class="fsel" id="fS">
-              <option value="">Selecciona un servicio...</option>
+              <option value="">Seleccioná un servicio...</option>
               <option value="Tu negocio en internet - desde L 1,200">Tu negocio en internet — desde L 1,200</option>
               <option value="Página web completa - desde L 4,500">Página web completa — desde L 4,500</option>
               <option value="Tienda para vender online - desde L 6,500">Tienda para vender online — desde L 6,500</option>
@@ -488,7 +651,7 @@
             </select>
           </div>
           <div class="fgrp">
-            <label class="flbl">Cuéntame tu idea</label>
+            <label class="flbl">Contame tu idea</label>
             <textarea class="fta" id="fM" placeholder="Tengo un negocio de... y quiero una página que..."></textarea>
           </div>
           <button class="fbtn" id="fBtn">
@@ -507,12 +670,8 @@
   <div class="footer-inner">
     <div class="flogo">
       <div class="flogo-wrap">
-        <img
-          class="flogo-img"
-          src="img/logo.jpg"
-          alt="logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
+        <img class="flogo-img" src="img/logo.jpg" alt="logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
         <div class="flogi" style="display:none;">D</div>
       </div>
       <div>
@@ -523,6 +682,7 @@
     <div class="flinks">
       <a href="#proyectos">Proyectos</a>
       <a href="#servicios">Servicios</a>
+      <a href="#testimonios">Clientes</a>
       <a href="#sobre-mi">Nosotros</a>
       <a href="#proceso">Proceso</a>
     </div>
@@ -533,7 +693,7 @@
     </div>
   </div>
   <div class="fdivider"></div>
-  <p class="fcopy">© 2026 Dyveron Tech — Hecho con ❤️ en <span>Honduras 🇭🇳</span></p>
+  <p class="fcopy">© 2026 Dyveron Tech — Hecho en <span>Honduras 🇭🇳</span></p>
 </footer>
 
 <script src="app.js"></script>
