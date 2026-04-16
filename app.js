@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════
-   DYVERON TECH — app.js (v3.0)
+   DYVERON TECH — app.js (v5.0)
    ══════════════════════════════════════════════ */
 
 const isMobile = window.matchMedia('(max-width: 768px)').matches;
@@ -39,7 +39,7 @@ if (!isMobile) {
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('sc', scrollY > 40);
-});
+}, { passive: true });
 
 /* ── MOBILE MENU ───────────────────────────────── */
 const menuBtn    = document.getElementById('menuBtn');
@@ -92,22 +92,24 @@ document.addEventListener('keydown', e => {
     H = canvas.height = innerHeight;
   }
   resize();
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', resize, { passive: true });
 
   class Particle {
     constructor() { this.reset(); }
     reset() {
       this.x  = Math.random() * W;
       this.y  = Math.random() * H;
-      this.vx = (Math.random() - .5) * .32;
-      this.vy = (Math.random() - .5) * .32 - .08;
-      this.r  = Math.random() * 1.4 + .2;
-      this.a  = Math.random() * .55 + .1;
+      this.vx = (Math.random() - .5) * .25;
+      this.vy = (Math.random() - .5) * .25 - .06;
+      this.r  = Math.random() * 1.2 + .2;
+      this.a  = Math.random() * .45 + .07;
       const roll = Math.random();
-      this.col = roll < .55 ? '99,102,241' : roll < .85 ? '6,182,212' : '168,85,247';
+      this.col = roll < .55 ? '59,143,232'
+               : roll < .82 ? '98,170,255'
+               :              '22,96,184';
     }
     tick() {
-      this.x += this.vx; this.y += this.vy; this.a -= .0007;
+      this.x += this.vx; this.y += this.vy; this.a -= .00055;
       if (this.y < -10 || this.a <= 0) this.reset();
     }
     draw() {
@@ -118,12 +120,12 @@ document.addEventListener('keydown', e => {
     }
   }
 
-  const count = isMobile ? 40 : 75;
+  const count = isMobile ? 35 : 65;
   for (let i = 0; i < count; i++) pts.push(new Particle());
 
   function drawLines() {
     if (isMobile) return;
-    const maxDist = 110;
+    const maxDist = 100;
     for (let i = 0; i < pts.length; i++) {
       for (let j = i + 1; j < pts.length; j++) {
         const dx = pts[i].x - pts[j].x;
@@ -133,7 +135,7 @@ document.addEventListener('keydown', e => {
           ctx.beginPath();
           ctx.moveTo(pts[i].x, pts[i].y);
           ctx.lineTo(pts[j].x, pts[j].y);
-          ctx.strokeStyle = `rgba(99,102,241,${.025 * (1 - d/maxDist)})`;
+          ctx.strokeStyle = `rgba(59,143,232,${.018 * (1 - d/maxDist)})`;
           ctx.lineWidth   = .5;
           ctx.stroke();
         }
@@ -159,7 +161,7 @@ const revealObserver = new IntersectionObserver(entries => {
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: .08 });
+}, { threshold: .07 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
@@ -173,7 +175,7 @@ const processObserver = new IntersectionObserver(entries => {
       processObserver.disconnect();
     }
   });
-}, { threshold: .1 });
+}, { threshold: .08 });
 
 const pg = document.querySelector('.procg');
 if (pg) processObserver.observe(pg);
@@ -188,7 +190,7 @@ const servObserver = new IntersectionObserver(entries => {
       servObserver.disconnect();
     }
   });
-}, { threshold: .06 });
+}, { threshold: .05 });
 
 const sg = document.querySelector('.sgrid');
 if (sg) servObserver.observe(sg);
@@ -203,7 +205,7 @@ const testObserver = new IntersectionObserver(entries => {
       testObserver.disconnect();
     }
   });
-}, { threshold: .06 });
+}, { threshold: .05 });
 
 const tg = document.querySelector('.tgrid');
 if (tg) testObserver.observe(tg);
@@ -220,7 +222,7 @@ const sectionObserver = new IntersectionObserver(entries => {
       });
     }
   });
-}, { threshold: .4 });
+}, { threshold: .35 });
 
 sections.forEach(s => sectionObserver.observe(s));
 
@@ -230,7 +232,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      const offset = nav.offsetHeight + 20;
+      const offset = nav.offsetHeight + 24;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -247,7 +249,7 @@ document.getElementById('fBtn').addEventListener('click', function () {
   if (!name) {
     const input = document.getElementById('fN');
     input.style.borderColor = 'rgba(240,82,82,0.7)';
-    input.style.boxShadow   = '0 0 0 3px rgba(240,82,82,0.12)';
+    input.style.boxShadow   = '0 0 0 3px rgba(240,82,82,0.10)';
     input.focus();
     setTimeout(() => {
       input.style.borderColor = '';
@@ -257,7 +259,7 @@ document.getElementById('fBtn').addEventListener('click', function () {
   }
 
   const text =
-    `Hola Fernando 👋, vi tu portafolio de Dyveron Tech.%0A%0A` +
+    `Hola Fernando 👋, vi su portafolio de Dyveron Tech.%0A%0A` +
     `*Nombre:* ${encodeURIComponent(name)}%0A` +
     `*Contacto:* ${encodeURIComponent(contact || '—')}%0A` +
     `*Servicio:* ${encodeURIComponent(service || 'Sin especificar')}%0A` +
@@ -272,7 +274,7 @@ if (!isMobile) {
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     orbs.forEach((orb, i) => {
-      const speed = (i + 1) * 0.06;
+      const speed = (i + 1) * 0.050;
       orb.style.transform = `translateY(${y * speed}px)`;
     });
   }, { passive: true });
