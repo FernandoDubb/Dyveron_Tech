@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════
-   DYVERON TECH — style.css  (v5.0 — Premium Agency)
+   DYVERON TECH — style.css  (v5.1 — mejorado)
    Fuente display: Bebas Neue | Body: DM Sans | Mono: Space Mono
    ══════════════════════════════════════════════ */
 
@@ -111,7 +111,7 @@ body.hov .cring { width:46px; height:46px; border-color:var(--accent); backgroun
   box-shadow: 0 1px 40px rgba(0,0,0,0.50);
 }
 
-/* LOGO — más impacto */
+/* LOGO */
 .nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text); }
 
 .logo-wrap {
@@ -139,7 +139,6 @@ body.hov .cring { width:46px; height:46px; border-color:var(--accent); backgroun
   transform: scale(1.04);
 }
 
-/* ——— Halo giratorio alrededor del logo ——— */
 .logo-wrap::before {
   content: '';
   position: absolute;
@@ -268,7 +267,19 @@ section { padding: 8rem 5.5%; position: relative; z-index: 1; }
 }
 .sh .a  { color: var(--accent-h); }
 .sh .a2 { background: linear-gradient(135deg, var(--accent-h), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.ss { color: var(--muted); font-size: .94rem; max-width: 500px; line-height: 1.85; font-weight: 400; }
+.ss { color: var(--muted); font-size: .94rem; max-width: 560px; line-height: 1.85; font-weight: 400; }
+
+/* ✅ URGENCIA: estilo del badge de escasez en servicios */
+.ss-urgencia {
+  display: inline-block;
+  margin-top: .55rem;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  opacity: .9;
+}
 
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
 
@@ -705,6 +716,7 @@ footer { background:var(--bg); border-top:1px solid var(--border2); padding:2.8r
   .hgarantia { flex-direction:column; gap:.7rem; }
   .hg-divider { display:none; }
   .cta-final-garantia { flex-direction:column; gap:.5rem; }
+  .ss-urgencia { display:block; margin-top:.5rem; }
 }
 
 @media (max-width:480px) {
