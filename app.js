@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════
-   DYVERON TECH — app.js (v5.0)
+   DYVERON TECH — app.js (v5.2)
    ══════════════════════════════════════════════ */
 
 const isMobile = window.matchMedia('(max-width: 768px)').matches;
@@ -24,7 +24,7 @@ if (!isMobile) {
     requestAnimationFrame(animateCursor);
   })();
 
-  document.querySelectorAll('a, button, .pc, .sc2, .prc, .tc').forEach(el => {
+  document.querySelectorAll('a, button, .pc, .sc2, .prc, .tc, .faq-item').forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('hov'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('hov'));
   });
@@ -209,6 +209,28 @@ const testObserver = new IntersectionObserver(entries => {
 
 const tg = document.querySelector('.tgrid');
 if (tg) testObserver.observe(tg);
+
+/* ── FAQ ACCORDION ─────────────────────────────── */
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+
+    // Cerrar todos los demás
+    faqItems.forEach(other => {
+      if (other !== item) {
+        other.classList.remove('open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Toggle el actual
+    item.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+});
 
 /* ── ACTIVE NAV LINK ───────────────────────────── */
 const sections = document.querySelectorAll('section[id]');
